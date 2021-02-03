@@ -30,6 +30,6 @@ class PlayersController < ApplicationController
     private
     
     def player_params
-        params.permit(:id, :name, :category)
+        params.permit(:id, :name, :position, :real_mlb_team, :years, :salary_per_year, :team_id)
     end
 end
