@@ -54,19 +54,23 @@ Team.create(name: "Washington Nationals", logo: logos.sample, total_salary: rand
 Team.create(name: "Free Agent", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 31)
 
 20.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, team_id: Team.all.sample.id)
+    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, team_id: rand(1..30))
 end
 
-15. times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: 0, salary_per_year: 0, real_mlb_team: teams.sample, team_id: 31)
-end
+Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
+Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
+Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 
-10.times do
-    Bid.create(years: rand(1..4), salary_per_year: rand(0.4..2.0), player_id: rand(21..35))
-end
+Bid.create(years: 1, salary_per_year: 0.4, player_id: 21)
+Bid.create(years: 1, salary_per_year: 0.5, player_id: 21)
+Bid.create(years: 1, salary_per_year: 0.8, player_id: 21)
+Bid.create(years: 1, salary_per_year: 1.6, player_id: 21)
+Bid.create(years: 2, salary_per_year: 2.0, player_id: 22)
+Bid.create(years: 2, salary_per_year: 2.5, player_id: 22)
+Bid.create(years: 3, salary_per_year: 3.0, player_id: 23)
+Bid.create(years: 4, salary_per_year: 4.0, player_id: 23)
 
 70.times do
     UserBid.create(user_id: User.all.sample.id, bid_id: Bid.all.sample.id)
 end
-
 
