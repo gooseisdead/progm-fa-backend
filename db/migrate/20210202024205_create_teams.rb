@@ -3,7 +3,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
     create_table :teams do |t|
       t.string :name
       t.string :logo
-      t.integer :total_salary
+      t.float :total_salary
       t.float :playoff_discount
       t.belongs_to :user, null: false, foreign_key: true
 

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_024205) do
 
   create_table "bids", force: :cascade do |t|
     t.integer "years"
-    t.integer "salary_per_year"
+    t.float "salary_per_year"
     t.integer "player_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_024205) do
     t.string "position"
     t.string "real_mlb_team"
     t.integer "years"
-    t.integer "salary_per_year"
+    t.float "salary_per_year"
     t.integer "team_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_024205) do
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.string "logo"
-    t.integer "total_salary"
+    t.float "total_salary"
     t.float "playoff_discount"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
