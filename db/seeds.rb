@@ -21,9 +21,9 @@ teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston 
     User.create(username: Faker::Name.middle_name)
 end
 
-Team.create(name: "Arizona Diamondbacks", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 1 )
-Team.create(name: "Atlanta Braves", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 2)
-Team.create(name: "Baltimore Orioles", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 3)
+Team.create(name: "Arizona Diamondbacks", logo: "https://1000logos.net/wp-content/uploads/2018/05/Arizona-Diamondbacks-Logo.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 1 )
+Team.create(name: "Atlanta Braves", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Atlanta_Braves.svg/2560px-Atlanta_Braves.svg.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 2)
+Team.create(name: "Baltimore Orioles", logo: "https://logos-world.net/wp-content/uploads/2020/05/Baltimore-Orioles-logo.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 3)
 Team.create(name: "Boston Red Sox", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 4)
 Team.create(name: "Chicago White Sox", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 5)
 Team.create(name: "Chicago Cubs", logo: logos.sample, total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 6)
