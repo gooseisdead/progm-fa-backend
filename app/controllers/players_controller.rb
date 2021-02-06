@@ -27,6 +27,11 @@ class PlayersController < ApplicationController
         render json: @player
     end
 
+
+    def destroy 
+        @player.destroy
+    end
+
     private
     
     def player_params
