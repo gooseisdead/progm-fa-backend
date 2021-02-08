@@ -30,6 +30,6 @@ class UsersController < ApplicationController
     private
     
     def user_params
-        params.permit(:id, :username, :team)
+        params.permit(:id, :username, :team, :bid_id)
     end
 end

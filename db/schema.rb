@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_02_024205) do
+ActiveRecord::Schema.define(version: 2021_02_08_220912) do
 
   create_table "bids", force: :cascade do |t|
     t.integer "years"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_024205) do
     t.integer "player_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["player_id"], name: "index_bids_on_player_id"
   end
 
@@ -44,15 +45,6 @@ ActiveRecord::Schema.define(version: 2021_02_02_024205) do
     t.index ["user_id"], name: "index_teams_on_user_id"
   end
 
-  create_table "user_bids", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "bid_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["bid_id"], name: "index_user_bids_on_bid_id"
-    t.index ["user_id"], name: "index_user_bids_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.datetime "created_at", precision: 6, null: false
@@ -62,6 +54,4 @@ ActiveRecord::Schema.define(version: 2021_02_02_024205) do
   add_foreign_key "bids", "players"
   add_foreign_key "players", "teams"
   add_foreign_key "teams", "users"
-  add_foreign_key "user_bids", "bids"
-  add_foreign_key "user_bids", "users"
 end

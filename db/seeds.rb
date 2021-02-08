@@ -62,16 +62,12 @@ Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0
 Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 
-Bid.create(years: 1, salary_per_year: 0.4, player_id: 21)
-Bid.create(years: 1, salary_per_year: 0.5, player_id: 21)
-Bid.create(years: 1, salary_per_year: 0.8, player_id: 21)
-Bid.create(years: 1, salary_per_year: 1.6, player_id: 21)
-Bid.create(years: 2, salary_per_year: 2.0, player_id: 22)
-Bid.create(years: 2, salary_per_year: 2.5, player_id: 22)
-Bid.create(years: 3, salary_per_year: 3.0, player_id: 23)
-Bid.create(years: 4, salary_per_year: 4.0, player_id: 23)
-
-70.times do
-    UserBid.create(user_id: User.all.sample.id, bid_id: Bid.all.sample.id)
-end
+Bid.create(years: 1, salary_per_year: 0.4, player_id: 21, user_id: 1)
+Bid.create(years: 1, salary_per_year: 0.5, player_id: 21, user_id: 2)
+Bid.create(years: 1, salary_per_year: 0.8, player_id: 21, user_id: 3)
+Bid.create(years: 1, salary_per_year: 1.6, player_id: 21, user_id: 4)
+Bid.create(years: 2, salary_per_year: 2.0, player_id: 22, user_id: 5)
+Bid.create(years: 2, salary_per_year: 2.5, player_id: 22, user_id: 6)
+Bid.create(years: 3, salary_per_year: 3.0, player_id: 23, user_id: 1)
+Bid.create(years: 4, salary_per_year: 4.0, player_id: 23, user_id: 4)
 

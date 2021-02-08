@@ -1,6 +1,5 @@
 class BidSerializer < ActiveModel::Serializer
-  attributes :id, :years, :salary_per_year, :created_at, :users
+  attributes :id, :years, :salary_per_year, :created_at, :player_id, :user_id
   belongs_to :player
-  has_many :user_bids
-  has_many :users, through: :user_bids
+  belongs_to :user
 end

@@ -30,6 +30,6 @@ class TeamsController < ApplicationController
     private
     
     def team_params
-        params.permit(:id, :name, :logo, :total_salary, :playoff_discount)
+        params.permit(:id, :name, :logo, :total_salary, :playoff_discount, :player_id)
     end
 end
