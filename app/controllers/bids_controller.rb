@@ -25,12 +25,13 @@ class BidsController < ApplicationController
 
     def create
         @bid = Bid.create(bid_params)
+        byebug
         render json: @bid
     end
 
     private
     
     def bid_params
-        params.permit(:id, :years, :salary_per_year, :user_bid_id, :player_id)
+        params.permit(:id, :years, :salary_per_year, :user_bid_id, :player_id )
     end
 end
