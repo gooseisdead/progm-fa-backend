@@ -18,9 +18,40 @@ teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston 
         "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", 
         "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"]
 
-31.times do
-    User.create(username: Faker::Name.middle_name)
-end
+
+User.create(username: "Oren")
+User.create(username: "Toy")
+User.create(username: "Nick")
+User.create(username: "Charlie")
+User.create(username: "Micah")
+User.create(username: "Chris")
+User.create(username: "Greg")
+User.create(username: "Kevin")
+User.create(username: "Rob")
+User.create(username: "Max")
+User.create(username: "Jon")
+User.create(username: "Michael")
+User.create(username: "Nick")
+User.create(username: "Dave")
+User.create(username: "Zac")
+User.create(username: "PJ")
+User.create(username: "Ben")
+User.create(username: "Cam")
+User.create(username: "Smitty")
+User.create(username: "Mills")
+User.create(username: "Scott")
+User.create(username: "Sanjay")
+User.create(username: "Tucker")
+User.create(username: "Matteson")
+User.create(username: "Zack")
+User.create(username: "Billy")
+User.create(username: "Ben")
+User.create(username: "Kevin")
+User.create(username: "Ben")
+User.create(username: "Max")
+User.create(username: "admin")
+
+
 
 Team.create(name: "Arizona Diamondbacks", logo: "/images/dbacks.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 1)
 Team.create(name: "Atlanta Braves", logo: "/images/braves.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 2)
@@ -58,9 +89,15 @@ Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: ran
     Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, team_id: rand(1..30))
 end
 
-Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
+Player.create(name: "Keury Mella" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
+Player.create(name: "Jose Urena" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", team_id: 31)
+Player.create(name: "Nick Margevicius" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", team_id: 31)
+Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", team_id: 31)
+Player.create(name: "Kohei Arihara" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", team_id: 31)
+
+
 
 Bid.create(years: 1, salary_per_year: 0.4, player_id: 201, user_id: 1)
 Bid.create(years: 1, salary_per_year: 0.5, player_id: 201, user_id: 2)
@@ -70,4 +107,11 @@ Bid.create(years: 2, salary_per_year: 2.0, player_id: 202, user_id: 5)
 Bid.create(years: 2, salary_per_year: 2.5, player_id: 202, user_id: 6)
 Bid.create(years: 3, salary_per_year: 3.0, player_id: 203, user_id: 1)
 Bid.create(years: 4, salary_per_year: 4.0, player_id: 203, user_id: 4)
+Bid.create(years: 2, salary_per_year: 2.5, player_id: 204, user_id: 4)
+Bid.create(years: 1, salary_per_year: 3.0, player_id: 204, user_id: 4)
+Bid.create(years: 1, salary_per_year: 4.0, player_id: 205, user_id: 4)
+Bid.create(years: 1, salary_per_year: 4.5, player_id: 205, user_id: 4)
+Bid.create(years: 1, salary_per_year: 21.0, player_id: 206, user_id: 4)
+Bid.create(years: 1, salary_per_year: 22.0, player_id: 206, user_id: 4)
+Bid.create(years: 1, salary_per_year: 8.0, player_id: 207, user_id: 4)
 
