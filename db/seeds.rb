@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-positions = ["C", "1B", "2B", "3B", "SS", "OF", "P"]
+positions = ["C", "1B", "2B", "3B", "SS", "OF", "SP", "RP"]
 logos = ["logo team", "team logo"]
 teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", 
         "Chicago White Sox", "Chicago Cubs",  "Cincinnati Reds", "Cleveland Indians", 
@@ -51,8 +51,6 @@ User.create(username: "Ben")
 User.create(username: "Max")
 User.create(username: "admin")
 
-
-
 Team.create(name: "Arizona Diamondbacks", logo: "/images/dbacks.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 1)
 Team.create(name: "Atlanta Braves", logo: "/images/braves.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 2)
 Team.create(name: "Baltimore Orioles", logo: "/images/orioles.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 3)
@@ -89,13 +87,13 @@ Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: ran
     Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, team_id: rand(1..30))
 end
 
-Player.create(name: "Keury Mella" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
+Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
-Player.create(name: "Jose Urena" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", team_id: 31)
-Player.create(name: "Nick Margevicius" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", team_id: 31)
+Player.create(name: "Jose Urena" , position: "SP", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", team_id: 31)
+Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", team_id: 31)
 Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", team_id: 31)
-Player.create(name: "Kohei Arihara" , position: "P", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", team_id: 31)
+Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", team_id: 31)
 
 
 
@@ -108,10 +106,10 @@ Bid.create(years: 2, salary_per_year: 2.5, player_id: 202, user_id: 6)
 Bid.create(years: 3, salary_per_year: 3.0, player_id: 203, user_id: 1)
 Bid.create(years: 4, salary_per_year: 4.0, player_id: 203, user_id: 4)
 Bid.create(years: 2, salary_per_year: 2.5, player_id: 204, user_id: 4)
-Bid.create(years: 1, salary_per_year: 3.0, player_id: 204, user_id: 4)
+Bid.create(years: 1, salary_per_year: 3.0, player_id: 204, user_id: 25)
 Bid.create(years: 1, salary_per_year: 4.0, player_id: 205, user_id: 4)
-Bid.create(years: 1, salary_per_year: 4.5, player_id: 205, user_id: 4)
+Bid.create(years: 1, salary_per_year: 4.5, player_id: 205, user_id: 7)
 Bid.create(years: 1, salary_per_year: 21.0, player_id: 206, user_id: 4)
-Bid.create(years: 1, salary_per_year: 22.0, player_id: 206, user_id: 4)
-Bid.create(years: 1, salary_per_year: 8.0, player_id: 207, user_id: 4)
+Bid.create(years: 1, salary_per_year: 22.0, player_id: 206, user_id: 13)
+Bid.create(years: 1, salary_per_year: 8.0, player_id: 207, user_id: 7)
 
