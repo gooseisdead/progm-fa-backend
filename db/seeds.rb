@@ -54,7 +54,7 @@ Team.create(name: "Toronto Blue Jays", logo: "/images/bluejays.png", total_salar
 Team.create(name: "Washington Nationals", logo: "/images/nationals.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 30)
 Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 31)
 
-20.times do
+200.times do
     Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, team_id: rand(1..30))
 end
 
@@ -62,12 +62,12 @@ Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0
 Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
 
-Bid.create(years: 1, salary_per_year: 0.4, player_id: 21, user_id: 1)
-Bid.create(years: 1, salary_per_year: 0.5, player_id: 21, user_id: 2)
-Bid.create(years: 1, salary_per_year: 0.8, player_id: 21, user_id: 3)
-Bid.create(years: 1, salary_per_year: 1.6, player_id: 21, user_id: 4)
-Bid.create(years: 2, salary_per_year: 2.0, player_id: 22, user_id: 5)
-Bid.create(years: 2, salary_per_year: 2.5, player_id: 22, user_id: 6)
-Bid.create(years: 3, salary_per_year: 3.0, player_id: 23, user_id: 1)
-Bid.create(years: 4, salary_per_year: 4.0, player_id: 23, user_id: 4)
+Bid.create(years: 1, salary_per_year: 0.4, player_id: 201, user_id: 1)
+Bid.create(years: 1, salary_per_year: 0.5, player_id: 201, user_id: 2)
+Bid.create(years: 1, salary_per_year: 0.8, player_id: 201, user_id: 3)
+Bid.create(years: 1, salary_per_year: 1.6, player_id: 201, user_id: 4)
+Bid.create(years: 2, salary_per_year: 2.0, player_id: 202, user_id: 5)
+Bid.create(years: 2, salary_per_year: 2.5, player_id: 202, user_id: 6)
+Bid.create(years: 3, salary_per_year: 3.0, player_id: 203, user_id: 1)
+Bid.create(years: 4, salary_per_year: 4.0, player_id: 203, user_id: 4)
 
