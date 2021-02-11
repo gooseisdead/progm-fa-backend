@@ -1,5 +1,6 @@
 
 positions = ["C", "1B", "2B", "3B", "SS", "OF", "SP", "RP"]
+random = [true, false]
 teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", 
         "Chicago White Sox", "Chicago Cubs",  "Cincinnati Reds", "Cleveland Indians", 
         "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", 
@@ -74,16 +75,16 @@ Team.create(name: "Washington Nationals", logo: "/images/nationals.png", total_s
 Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 31)
 
 200.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, team_id: rand(1..30))
+    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..22.0), real_mlb_team: teams.sample, minor_league_status: false, team_id: rand(1..30))
 end
 
-Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
-Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
-Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", team_id: 31)
-Player.create(name: "Jose Urena" , position: "SP", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", team_id: 31)
-Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", team_id: 31)
-Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", team_id: 31)
-Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", team_id: 31)
+Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
+Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
+Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
+Player.create(name: "Jose Urena" , position: "SP", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", minor_league_status: false, team_id: 31)
+Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", minor_league_status: false, team_id: 31)
+Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", minor_league_status: false, team_id: 31)
+Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", minor_league_status: false, team_id: 31)
 
 Bid.create(years: 1, salary_per_year: 0.5, player_id: 201, user_id: 1)
 Bid.create(years: 1, salary_per_year: 0.6, player_id: 201, user_id: 2)
