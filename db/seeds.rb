@@ -75,7 +75,11 @@ Team.create(name: "Washington Nationals", logo: "/images/nationals.png", total_s
 Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: rand(85.0..150.0), playoff_discount: 0.0, user_id: 31)
 
 200.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..22.0), real_mlb_team: teams.sample, minor_league_status: false, team_id: rand(1..30))
+    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0), real_mlb_team: teams.sample, minor_league_status: false, team_id: rand(1..30))
+end
+
+50.times do
+    Player.create(name: Faker::Name.name, position: positions.sample, years: 1, salary_per_year: 0.5, real_mlb_team: teams.sample, minor_league_status: true, team_id: rand(1..30))
 end
 
 Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
@@ -86,19 +90,19 @@ Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_ye
 Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", minor_league_status: false, team_id: 31)
 Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", minor_league_status: false, team_id: 31)
 
-Bid.create(years: 1, salary_per_year: 0.5, player_id: 201, user_id: 1)
-Bid.create(years: 1, salary_per_year: 0.6, player_id: 201, user_id: 2)
-Bid.create(years: 1, salary_per_year: 0.8, player_id: 201, user_id: 3)
-Bid.create(years: 1, salary_per_year: 1.6, player_id: 201, user_id: 4)
-Bid.create(years: 2, salary_per_year: 2.0, player_id: 202, user_id: 5)
-Bid.create(years: 2, salary_per_year: 2.5, player_id: 202, user_id: 6)
-Bid.create(years: 3, salary_per_year: 3.0, player_id: 203, user_id: 1)
-Bid.create(years: 4, salary_per_year: 4.0, player_id: 203, user_id: 4)
-Bid.create(years: 2, salary_per_year: 2.5, player_id: 204, user_id: 4)
-Bid.create(years: 1, salary_per_year: 3.0, player_id: 204, user_id: 25)
-Bid.create(years: 1, salary_per_year: 4.0, player_id: 205, user_id: 4)
-Bid.create(years: 1, salary_per_year: 4.5, player_id: 205, user_id: 7)
-Bid.create(years: 1, salary_per_year: 21.0, player_id: 206, user_id: 4)
-Bid.create(years: 1, salary_per_year: 22.0, player_id: 206, user_id: 13)
-Bid.create(years: 1, salary_per_year: 8.0, player_id: 207, user_id: 7)
+Bid.create(years: 1, salary_per_year: 0.5, player_id: 251, user_id: 1)
+Bid.create(years: 1, salary_per_year: 0.6, player_id: 251, user_id: 2)
+Bid.create(years: 1, salary_per_year: 0.8, player_id: 251, user_id: 3)
+Bid.create(years: 1, salary_per_year: 1.6, player_id: 251, user_id: 4)
+Bid.create(years: 2, salary_per_year: 2.0, player_id: 252, user_id: 5)
+Bid.create(years: 2, salary_per_year: 2.5, player_id: 252, user_id: 6)
+Bid.create(years: 3, salary_per_year: 3.0, player_id: 253, user_id: 1)
+Bid.create(years: 4, salary_per_year: 4.0, player_id: 253, user_id: 4)
+Bid.create(years: 2, salary_per_year: 2.5, player_id: 254, user_id: 4)
+Bid.create(years: 1, salary_per_year: 3.0, player_id: 254, user_id: 25)
+Bid.create(years: 1, salary_per_year: 4.0, player_id: 255, user_id: 4)
+Bid.create(years: 1, salary_per_year: 4.5, player_id: 255, user_id: 7)
+Bid.create(years: 1, salary_per_year: 21.0, player_id: 256, user_id: 4)
+Bid.create(years: 1, salary_per_year: 22.0, player_id: 256, user_id: 13)
+Bid.create(years: 1, salary_per_year: 8.0, player_id: 257, user_id: 7)
 
