@@ -1,14 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 
 positions = ["C", "1B", "2B", "3B", "SS", "OF", "SP", "RP"]
-logos = ["logo team", "team logo"]
 teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", 
         "Chicago White Sox", "Chicago Cubs",  "Cincinnati Reds", "Cleveland Indians", 
         "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", 
@@ -17,7 +8,6 @@ teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston 
         "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", 
         "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", 
         "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"]
-
 
 User.create(username: "Oren")
 User.create(username: "Toy")
@@ -95,10 +85,8 @@ Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_ye
 Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", team_id: 31)
 Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", team_id: 31)
 
-
-
-Bid.create(years: 1, salary_per_year: 0.4, player_id: 201, user_id: 1)
-Bid.create(years: 1, salary_per_year: 0.5, player_id: 201, user_id: 2)
+Bid.create(years: 1, salary_per_year: 0.5, player_id: 201, user_id: 1)
+Bid.create(years: 1, salary_per_year: 0.6, player_id: 201, user_id: 2)
 Bid.create(years: 1, salary_per_year: 0.8, player_id: 201, user_id: 3)
 Bid.create(years: 1, salary_per_year: 1.6, player_id: 201, user_id: 4)
 Bid.create(years: 2, salary_per_year: 2.0, player_id: 202, user_id: 5)
