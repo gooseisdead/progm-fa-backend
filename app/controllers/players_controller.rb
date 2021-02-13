@@ -13,13 +13,14 @@ class PlayersController < ApplicationController
         @player = Player.new
     end
     
-    def edit
-        @player = Player.find(params[:id])
-    end
-    
+    # def edit
+    #     @player = Player.find(params[:id])
+    # end
+
     def update
         @player = Player.find(params[:id])
-        @Player.update(player_params)
+        @player.update!(minor_league_status: params[:minor_league_status])
+        render json: @player
     end
 
     def create
@@ -28,8 +29,10 @@ class PlayersController < ApplicationController
     end
 
 
-    def destroy 
-        @player.destroy
+    def destroy
+        @player = Player.find(params[:id])
+        @player.destroy!
+        render json: {}
     end
 
     private
