@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_11_045907) do
+ActiveRecord::Schema.define(version: 2021_02_16_185624) do
 
   create_table "bids", force: :cascade do |t|
     t.integer "years"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_02_11_045907) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "minor_league_status"
+    t.string "team_control"
     t.index ["team_id"], name: "index_players_on_team_id"
   end
 

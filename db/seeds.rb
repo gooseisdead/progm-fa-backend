@@ -9,6 +9,7 @@ teams = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston 
         "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", 
         "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", 
         "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"]
+control = ["Minors", "2nd Year", "3rd Year", "4th Year", "5th Year", "6th Year"]
 
 User.create(username: "Oren")
 User.create(username: "Toy")
@@ -75,20 +76,20 @@ Team.create(name: "Nationals", logo: "/images/nationals.png", total_salary: rand
 Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: rand(85.0..150).round(1), playoff_discount: 0.0, user_id: 31)
 
 200.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0).round(1), real_mlb_team: teams.sample, minor_league_status: false, team_id: rand(1..30))
+    Player.create(name: Faker::Name.name, position: positions.sample, years: rand(1..4), salary_per_year: rand(1.0..2.0).round(1), real_mlb_team: teams.sample, minor_league_status: false, team_control: control.sample, team_id: rand(1..30))
 end
 
 100.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: 1, salary_per_year: 0.5, real_mlb_team: teams.sample, minor_league_status: true, team_id: rand(1..30))
+    Player.create(name: Faker::Name.name, position: positions.sample, years: 1, salary_per_year: 0.5, real_mlb_team: teams.sample, minor_league_status: true, team_control: control.sample, team_id: rand(1..30))
 end
 
-Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
-Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
-Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_id: 31)
-Player.create(name: "Jose Urena" , position: "SP", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", minor_league_status: false, team_id: 31)
-Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", minor_league_status: false, team_id: 31)
-Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", minor_league_status: false, team_id: 31)
-Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", minor_league_status: false, team_id: 31)
+Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_control: "Minors", team_id: 31)
+Player.create(name: "Bryan Holaday" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_control: "Minors", team_id: 31)
+Player.create(name: "Dominic Miroglio" , position: "C", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_control: "Minors", team_id: 31)
+Player.create(name: "Jose Urena" , position: "SP", years: 0, salary_per_year: 0, real_mlb_team: "Detroit Tigers", minor_league_status: false, team_control: "Minors", team_id: 31)
+Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Seattle Mariners", minor_league_status: false, team_control: "Minors", team_id: 31)
+Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", minor_league_status: false, team_control: "Minors", team_id: 31)
+Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", minor_league_status: false, team_control: "Minors", team_id: 31)
 
 10.times do
     Player.create(name: Faker::Name.name, position: positions.sample, years: 0, salary_per_year: 0, real_mlb_team: teams.sample, minor_league_status: false, team_id: 31)
