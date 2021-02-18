@@ -19,7 +19,7 @@ class PlayersController < ApplicationController
 
     def update
         @player = Player.find(params[:id])
-        @player.update!(minor_league_status: params[:minor_league_status])
+        @player.update!(minor_league_status: params[:minor_league_status], team_id: params[:team_id])
         render json: @player
     end
 
