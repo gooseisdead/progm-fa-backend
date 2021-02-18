@@ -77,11 +77,19 @@ Team.create(name: "Nationals", logo: "/images/nationals.png", total_salary: rand
 Team.create(name: "Free Agent", logo: "/images/freeagent.png", total_salary: rand(85.0..150).round(1), playoff_discount: 0.0, user_id: 31)
 
 200.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, years: fa_years.sample, salary_per_year: rand(1.0..2.0).round(1), real_mlb_team: teams.sample, minor_league_status: false, team_control: control.sample, team_id: rand(2..30))
+    Player.create(name: Faker::Name.name, position: positions.sample, years: fa_years.sample, salary_per_year: rand(1.0..2.0).round(1), real_mlb_team: teams.sample, minor_league_status: false, team_control: control.sample, team_id: rand(1..18))
 end
 
-100.times do
-    Player.create(name: Faker::Name.name, position: positions.sample, salary_per_year: 0.5, real_mlb_team: teams.sample, minor_league_status: true, team_control: "minors", team_id: rand(1..30))
+200.times do
+    Player.create(name: Faker::Name.name, position: positions.sample, years: fa_years.sample, salary_per_year: rand(1.0..2.0).round(1), real_mlb_team: teams.sample, minor_league_status: false, team_control: control.sample, team_id: rand(20..30))
+end
+
+50.times do
+    Player.create(name: Faker::Name.name, position: positions.sample, salary_per_year: 0.5, real_mlb_team: teams.sample, minor_league_status: true, team_control: "minors", team_id: rand(1..18))
+end
+
+50.times do
+    Player.create(name: Faker::Name.name, position: positions.sample, salary_per_year: 0.5, real_mlb_team: teams.sample, minor_league_status: true, team_control: "minors", team_id: rand(19..30))
 end
 
 Player.create(name: "Keury Mella" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Arizona Diamondbacks", minor_league_status: false, team_control: "Free Agent", team_id: 31)
@@ -92,7 +100,7 @@ Player.create(name: "Nick Margevicius" , position: "RP", years: 0, salary_per_ye
 Player.create(name: "Ha-Seong Kim" , position: "SS", years: 0, salary_per_year: 0, real_mlb_team: "San Diego Padres", minor_league_status: false, team_control: "Free Agent", team_id: 31)
 Player.create(name: "Kohei Arihara" , position: "RP", years: 0, salary_per_year: 0, real_mlb_team: "Texas Rangers", minor_league_status: false, team_control: "Free Agent", team_id: 31)
 
-10.times do
+5.times do
     Player.create(name: Faker::Name.name, position: positions.sample, years: 0, salary_per_year: 0, real_mlb_team: teams.sample, minor_league_status: false, team_id: 31)
 end
 
@@ -113,6 +121,6 @@ Bid.create(years: 1, salary_per_year: 22.0, player_id: 306, user_id: 1)
 Bid.create(years: 1, salary_per_year: 8.0, player_id: 307, user_id: 7)
 
 30.times do
-    Bid.create(years: rand(1..4), salary_per_year: rand(0.5..25.0), player_id: rand(307..316), user_id: rand(1..30))
+    Bid.create(years: rand(1..4), salary_per_year: rand(0.5..25.0), player_id: rand(307..311), user_id: rand(1..30))
 end
 
