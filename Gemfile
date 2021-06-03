@@ -49,3 +49,5 @@ gem "graphviz", "~> 1.2"
 gem "faker", "~> 2.15"
 
 gem "active_model_serializers", "~> 0.10.12"
+
+gem 'pg'

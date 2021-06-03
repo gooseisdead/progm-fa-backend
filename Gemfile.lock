@@ -101,6 +101,7 @@ GEM
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    pg (1.2.3)
     process-group (1.2.3)
       process-terminal (~> 0.2.0)
     process-pipeline (1.0.2)
@@ -184,6 +185,7 @@ DEPENDENCIES
   faker (~> 2.15)
   graphviz (~> 1.2)
   listen (~> 3.2)
+  pg
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.4)
